@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기</title>
+</head>
+<body>
+    <h1>주문하기</h1>
+    
+    <form action="실습문제8.html" method="get">
+        <p>고객명 : <input type="text" name="name" id="name" autofocus required></p>
+        <p>전화번호 : <input type="tel" name="tel" id="tel" required></p>
+        <p>E-mail : <input type="email" name="email" id="email"></p>
+        
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <p><input type="radio" name="size" id="size_s" value='s' checked>
+                <label for='size_s'>Samll</label></p> <!-- 글자를 선택해도 radio선택할수있음-->
+            <p><input type="radio" name="size" id="size_m" value='m'>
+                <label for="size_m">Medium</label></p>
+            <p><input type="radio" name="size" id="size_l" value='l'>
+                <label for="size_l">Large</label></p>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <p><input type="checkbox" name="top" id="top1">
+                <label for='top1'>베이컨</label></p>
+            <p><input type="checkbox" name="top" id="top2">
+                <label for='top2'>치즈</p></label>
+            <p><input type="checkbox" name="top" id="top3">
+                <label for='top3'>양파</p></label>
+            <p><input type="checkbox" name="top" id="top4">
+                <label for='top4'>버섯</p></label>
+        </fieldset>
+        <p>희망 배송 시간 : <input type="time" name="time" id="time"></p>
+        <p>배송 시 요청사항 <textarea cols='30' rows='4' name='request'></textarea></p>
+        <input type="submit" value="주문하기">
+
+    </form>
+</body>
+</html>
