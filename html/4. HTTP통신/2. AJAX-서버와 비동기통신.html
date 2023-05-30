@@ -19,9 +19,11 @@
     xhr.open('get','json/student-2.json');
     xhr.send();
     xhr.onreadystatechange = function(){
-      if (xhr.readyState == 200 && xhr.status == 4){
-        var txt =  JSON.parse(xhr.responseText);
-        res.innerHTML += txt;
+      if (xhr.readyState == 4 && xhr.status === 200){
+        let txt =  JSON.parse(xhr.responseText);
+        for (var i=0;i<txt.length;i++){
+          res.innerHTML += `${txt[i].name} : ${txt[i].major} : ${txt[i].grade} <br>`;
+        }
       }
     }
 
