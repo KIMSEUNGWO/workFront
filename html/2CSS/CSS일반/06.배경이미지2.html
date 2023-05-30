@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지 크기 조절</title>
+    <style>
+        #container{
+            width: 1100px;
+            margin: 50px auto;
+        }
+        .box{
+            border: 1px solid #222;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            float: left;
+            background: url(images/bg4\ copy.jpg) no-repeat left top;
+        }
+        .box1{
+            clear: both;
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+            background: url(images/bg4\ copy.jpg) no-repeat left top;
+            /* 이미지가 작더라도 요소를 덮도록 변경 */
+            background-size: cover;
+        }
+
+        #bg1{ background-size: auto; } /* 원래 배경 이미지 크기로 표시 */
+        #bg2{ background-size: 200px;} /* 가로 200px 높이 원본 */
+        /* 가로영역 또는 세로영역에 빈 공간이 생길 수 있음 */
+        #bg3{ background-size: contain;}
+        #bg4{ background-size: 100% 100%}
+        #bg5{ background-size: }
+        #bg6{ background-size: }
+    </style>
+</head>
+<body>
+    <div id='container'>
+        <div class='box' id='bg1'></div>
+        <div class='box' id='bg2'></div>
+        <div class='box' id='bg3'></div>
+        <div class='box' id='bg4'></div>
+        <div class='box' id='bg5'></div>
+        <div class='box1' id='bg6'></div>
+    </div>
+</body>
+</html>

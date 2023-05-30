@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼 만들기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #login_form{
+            width: 300px;
+            height: 100px;
+        }
+        #login_form_input{
+            width: 180px;
+            height: 100px;
+            float: left;
+        }
+        [id^=user]{
+            width: 180px;
+            height: 50px;
+            float: left;
+            font-size: 14px;
+        }
+
+        #login_form_btn{
+            width: 120px;
+            height: 100px;
+            float: left;
+        }
+        [type=submit]{
+            width: 120px;
+            height: 100px;
+            font-size: larger;
+            font-weight: bold;
+            float: left;
+            border-radius: 0px;
+        }
+        #login_link{
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #login_wrap input{
+            border: 1px solid lightskyblue;
+        }
+        [type=submit]{
+            background-color: lightskyblue;
+        }
+        [type=submit]:hover{
+            background-color: rgb(51, 173, 249);
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <h1>로그인 폼 만들기</h1>
+    <div id='login_wrap'>
+        <form id='login_form' action="" method='get'>
+            <div id='login_form_input'>
+                <input type="text" name="" id="userId" placeholder='아이디를 입력하세요' autofocus >
+                <input type="password" name="" id="userPw" placeholder='비밀번호를 입력하세요'>
+            </div>
+            <div id='login_form_btn'>
+                <input type="submit" value="로그인">
+            </div>
+        </form>
+    </div>
+    <div id='login_link'>
+        <a href="#">회원가입</a>
+        <a href="#">아이디찾기</a>
+        <a href="#">비밀번호 찾기</a>
+    </div>
+</body>
+</html>

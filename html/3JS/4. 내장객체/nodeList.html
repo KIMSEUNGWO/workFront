@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노드 리스트</title>
+</head>
+<script>
+  window.onload = function(){
+    
+    btn1.addEventListener('click',function(){
+      let item = document.querySelector('#items');
+      let ele = document.createElement('li');
+      let java = document.createTextNode('Java');
+      ele.appendChild(java);
+      item.appendChild(ele);
+
+      let ele2 = document.createElement('li');
+      let jsp = document.createTextNode('JSP/Servlet');
+      ele2.appendChild(jsp);
+      let html = document.querySelector('li');
+      item.insertBefore(ele2,html);
+    });
+  }
+</script>
+<body>
+  <h1>WebPrograming</h1>
+  <!-- <p>Java</p>
+  <p>Oracle</p> -->
+
+  <ul id='items'>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
+  </ul>
+  <button id='btn1'>출력</button>
+  <!-- <p>JSP/Servlet</p>
+  <p>STRING</p> -->
+</body>
+</html>

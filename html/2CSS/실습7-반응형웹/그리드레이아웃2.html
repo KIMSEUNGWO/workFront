@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper1{
+            display: grid;
+            /* 최소값 200px, 최대값 1fr */
+            /* 화면을 꽉채울만큼 컬럼 너비를 늘려서 표시 */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .wrapper2{
+            display: grid;
+            /* 최소값 200px, 최대값 1fr */
+            /* 컬럼 최소너비만큼 채워서 표시*/
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+        .item{
+            padding: 10px;
+            background-color: #eee;
+        }
+        .item:nth-child(even){
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <h2>auto-fill / auto-fit</h2>
+    컬럼의 너비와 함께 auto-fill auto-fit을 지정하면 <br>
+    화면 너비에 따라 자동으로 컬럼의 갯수를 조절 <br><br>
+    
+    auto-fit : 남는공간없이 꽉채우기 <br>
+    auto-fill : 최소너비까지 표시하고 남는공간은 그대로 둠 <br>
+    <!-- auto-fit -->
+    <h2>auto-fit</h2>
+    <div class="wrapper1">
+        <div class="item">Deserunt reprehenderit amet sit irure qui deserunt mollit deserunt magna cupidatat velit et.Deserunt reprehenderit amet sit irure qui deserunt mollit deserunt magna cupidatat velit et.</div>
+        <div class="item">Ea laborum fugiat duis sint pariatur incididunt.</div>
+        <div class="item">Magna nulla commodo</div>
+        <div class="item">Fugiat dolor magna eu et do duis et ipsum sint duis deserunt ullamco velit.</div>
+        <div class="item">Pariatur consectetur excepteur ad pariatur veniam minim commodo quis commodo fugiat veniam.</div>
+    </div>
+    <!-- auto-fill -->
+    <h2>auto-fill</h2>
+    <div class="wrapper2">
+        <div class="item">Deserunt reprehenderit amet sit irure qui deserunt mollit deserunt magna cupidatat velit et.Deserunt reprehenderit amet sit irure qui deserunt mollit deserunt magna cupidatat velit et.</div>
+        <div class="item">Ea laborum fugiat duis sint pariatur incididunt.</div>
+        <div class="item">Magna nulla commodo</div>
+        <div class="item">Fugiat dolor magna eu et do duis et ipsum sint duis deserunt ullamco velit.</div>
+        <div class="item">Pariatur consectetur excepteur ad pariatur veniam minim commodo quis commodo fugiat veniam.</div>
+    </div>
+</body>
+</html>

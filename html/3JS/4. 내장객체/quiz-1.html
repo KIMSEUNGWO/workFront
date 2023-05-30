@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 1</title>  
+  <link rel="stylesheet" href="css/quiz-1.css">
+  <script>
+    window.onload = function(){
+      
+
+
+      let btn = document.querySelector('#btn');
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        let name = document.querySelector('#username').value;
+        let major = document.querySelector('#major').value;
+        let tbody = document.querySelector('#attendant > tbody');
+        let eletr = document.createElement('tr');
+        let eletd1 = document.createElement('td');
+        let eletd2 = document.createElement('td');
+        let txtname = document.createTextNode(name);
+        let txtmajor = document.createTextNode(major);
+
+        eletd1.appendChild(txtname);
+        eletd2.appendChild(txtmajor);
+        eletr.appendChild(eletd1);
+        eletr.appendChild(eletd2);
+        tbody.appendChild(eletr);
+        
+        
+        
+      });
+    };
+  </script>
+</head>
+<body>
+  <div id="container">
+    <h1>참가자 명단</h1>
+    <form>
+      <ul id="userInput">  
+        <li>
+          <label for="username">이 름</label>
+          <input type="text" id="username">
+        </li>    
+        <li>
+          <label for="major">전 공</label>
+          <input type="text" id="major">
+        </li>           
+      </ul>
+      <button id='btn'>등록하기</button>      
+    </form>
+    
+    <table id="attendant">
+      <thead>
+        <tr>
+          <th>이 름</th>
+          <th>전 공</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>이름</td>
+          <td>전공</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

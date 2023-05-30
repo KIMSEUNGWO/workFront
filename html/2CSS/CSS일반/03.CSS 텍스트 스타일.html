@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 텍스트 스타일</title>
+    <!-- 내부 스타일-->
+    <style>
+
+    </style>
+    <!-- 외부 스타일-->
+    <link rel="stylesheet" href="03.CSS텍스트 스타일.css">
+</head>
+<body>
+    <h1>텍스트 스타일</h1>
+    <!-- 인라인 스타일
+        우선순위가 높다. 외부파일로 분리하기가 어렵다.
+    -->
+    <h2>1. font-family</h2>
+    텍스트의 글꼴을 지정할때
+    <p id='fft1'>글꼴 변경 테스트1</p>
+    <p id='fft2'>글꼴 변경 테스트2</p>
+    <p id='fft3'>글꼴 변경 테스트3</p>
+
+    <p>
+        웹 폰트 사용
+        <a href='https://fonts.google.com/'>구글 웹 폰트</a>
+        <br> style태그안에 @import한 후 사용 가능
+    </p>
+
+    <h2>2. font-size</h2>
+    <ul>
+        <li id='size1'>px 테스트</li>
+        <li id='size2'>em 테스트</li>
+        <li id='size3'>% 테스트</li>
+    </ul>
+    <h2>3. font-weight</h2>
+    텍스트의 두께를 변경할 때 사용
+    <ul>
+        <li>원래굵기</li>
+        <li id='fw1'>굵은글꼴</li>
+        <li id='fw2'>가늘게</li>
+        <li id='fw3'>굵게</li>
+    </ul>
+
+    <h2>4. font-variant</h2>
+    <p>I LOVE YOU</p>
+    <p id='fv'>i love you</p>
+
+    <h3>font-style</h3>
+    텍스트의 기울임을 지정할 때 사용
+    <ul>
+        <li>기울임 없음</li>
+        <li id='fs1'>italic 기울임</li>
+        <li id='fs2'>oblique 기울임</li>
+    </ul>
+
+    <h2>6. color</h2>
+    텍스트의 색상을 지정할 때 사용
+    <ul>
+        빨강글자
+        <li id='c-name'>색상명으로 지정</li> 
+        검정바탕에 흰글자
+        <li id='c-16'>16진수 값으로 지정</li>
+
+        <li id='c-rgb'>rgb로 설정</li>
+        
+        <li id='c-rgba'>rgba로 설정</li>
+    </ul>
+
+    <h2>7. text-decoration</h2>
+    텍스트에 줄을 그을때 사용
+    <ul>
+        <li id='td-none'>none</li>
+        <li id='td-underline'>underline</li>
+        <br>
+        <li id='td-overline'>overline</li>
+        <li id='td-line-through'>line-through</li>
+        링크스타일 변경
+        밑줄 없애기
+        글자색상 : #666
+        글자크기 1.5em
+        <a href='test.html' id='lin'>test링크</a>
+    </ul>
+
+    <h2>8. text-shadow</h2>
+    텍스트에 그림자 효과를 추가 <br>
+    test-shadow : 가로거리 세로거리 번짐정도 색상<br>
+    양수 글자의 오른쪽, 아래쪽<br>
+    음수 글자의 왼쪽, 위쪽<br>
+
+    번짐정도 : 양수값 그림자가 모든 방향으로 퍼져 나가므로 크게 표현
+
+    <div id='bg'>
+        <span id='ts1'>HTML5</span>
+        <span id='ts2'>CSS</span>
+        <span id='ts3'>JAVA SCRIPT</span>
+    </div>
+
+    <h2>9. text-transform</h2>
+    영문 텍스트의 대소문자 변환
+    <div>
+        <span id='tt1'>AAaaBBbb</span>
+        <span id='tt2'>AAaaBBbb</span>
+        <span id='tt3'>AAaaBBbb</span>
+        <span id='tt4'>AAaaBBbb</span>
+    </div>
+    <h2>10. line-height</h2>
+    <p class='lh1'>
+        	<!-- 왼쪽 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>
+    <p class='lh2'>
+	<!-- 오른쪽 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>
+    <p class='lh3'>
+	<!-- 가운데 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>	 	
+    <p class='lh4'>
+	<!-- 양쪽 정렬 -->
+	Integer elementum massa at nulla placerat varius.
+	Suspendisse in libero risus, in interdum massa.
+	Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+	Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
+    </p>
+
+    <h1>목록 스타일</h1>
+    <ul style='list-style-type: disc;'>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ul>
+    <ul style='list-style-type: square'>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ul>
+    <ul style='list-style-type: none'>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ul>
+    <ul style='list-style-image: url(images/dot.png);'>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+    </ul>
+    
+    <table>
+        <!--캡션-->
+        <tr>
+            <th>브라우져명</th> 
+            <th>제조사</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>익스플로러</td>
+            <td>MS</td>
+            <td>https://www.microsoft.com</td>
+        </tr>
+        <tr>
+            <td>크롬</td>
+            <td>구글</td>
+            <td>https://www.chrome.com</td>
+        </tr>
+        <tr>
+            <td>파이어폭스</td>
+            <td>Mozila</td>
+            <td>https://www.firefox.com</td>
+        </tr>
+    </table>
+</body>
+</html>

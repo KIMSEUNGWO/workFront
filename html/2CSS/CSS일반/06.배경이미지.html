@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+        body{
+            height: 100vw;
+            background-image: url(images/bg2.png);
+            /* 반복제거 */
+            background-repeat: no-repeat;
+            /* 오른쪽 상단으로 위치 지정 */
+            background-position: right top;
+            /* 배경이미지고정 
+                기본값 : scroll    
+            */
+            background-attachment: fixed;
+            /* 여러가지 속성을 한번에 표기 가능 */
+            background: url(images/bg4\ copy.jpg) no-repeat center bottom fixed;
+        }
+        .container{
+            width: 500px;
+            height: 200px;
+            line-height: 200px;
+            /* 배경화면 반복 */
+            background-image: url(../2CSS/images/apple-bg.jpg);
+            border: 20px dotted #000000;
+            /* border역역까지 포함하여 배경화면 출력 */
+            background-clip: border-box;
+            /* padding영역까지 포함하여 배경화면 출력 */
+            background-clip: padding-box;
+            background-clip: content-box;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 100px;
+            font-weight: 900;
+            text-align: center;
+            
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            border: 1px solid black;
+            background-image: url(images/book-icon.png);
+            background-repeat: no-repeat;
+            background-position: left center; /* 위치지정 */
+            line-height: 40px;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>텍스트</div>
+
+    <h1>이지스퍼블리싱</h1>
+    <ul>
+        <li>회사소개</li>
+        <li>소개</li>
+        <li>자료실</li>
+        <li>동영상강의</li>
+    </ul>
+</body>
+</html>

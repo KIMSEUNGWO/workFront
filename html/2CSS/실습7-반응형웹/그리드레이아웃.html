@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .wrapper{
+            border: 1px solid #ccc;
+            padding: 10px;
+            /* 그리드컨테이너 지정 */
+            display: grid;
+            /* 컬럼의 갯수와 크기지정
+                px는 고정단위이므로 컨텐츠가 짤릴 수 있음
+            */
+            grid-template-columns: 200px 200px 200px;
+            /* repeat(갯수, 크기) */
+            /* 너비가 200px 3개 */
+            grid-template-columns: repeat(3, 200px);
+            /* fr(fraction단위) : 그리드컨테이너의 여유공간을 비율로 나눠설정 */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* 행의 개수와 크기지정 */
+            /* 최대값 최소값 지정 */
+            grid-template-rows: 100px;
+            /* minmax(최소값, 최대값) */
+            grid-template-rows: repeat(2, minmax(100px, auto));
+            gap: 10px 20px; /* 상하, 좌우*/
+            row-gap: 50px; /* 행 간격*/
+            column-gap: 10px; /* 열 간격*/
+        }
+        .item{
+            padding: 10px;
+            background-color: #eee;
+        }
+        .item:nth-child(even){
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">Deserunt reprehenderit amet sit irure qui deserunt mollit deserunt magna cupidatat velit et.Deserunt reprehenderit amet sit irure qui deserunt mollit deserunt magna cupidatat velit et.</div>
+        <div class="item">Ea laborum fugiat duis sint pariatur incididunt.</div>
+        <div class="item">Magna nulla commodo laborum ea eu exercitation culpa fugiat.</div>
+        <div class="item">Fugiat dolor magna eu et do duis et ipsum sint duis deserunt ullamco velit.</div>
+        <div class="item">Pariatur consectetur excepteur ad pariatur veniam minim commodo quis commodo fugiat veniam.</div>
+    </div>
+    
+</body>
+</html>

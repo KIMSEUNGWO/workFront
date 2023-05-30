@@ -1,0 +1,201 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+#wrapper{
+    width: 1200px;
+    display: grid;
+    grid-template-rows: 100px 300px 300px 100px; 
+}
+header{
+    background-color: rgb(54, 107, 255);
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+header #logo{
+    padding-left: 20px;
+}
+header nav{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#contents{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 300px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    border-top: 3px solid black;
+}
+
+#logo a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px black;
+    line-height: 100px;
+    font-size: 20px;
+}
+
+#topMenu{
+    list-style: none;
+    padding-left: 0px;
+    position: relative;
+    
+}
+#topMenu li{
+    margin: 0px 40px;
+    margin-bottom: 10px;
+    width: 130px;
+    height: 30px;
+    position: relative;
+    float: left;
+}
+#topMenu li a:hover{
+    color: #ccc;
+}
+
+#topMenu li a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+}
+
+#topMenu li a:hover + #submenu, #submenu:hover{
+    max-height: 500px;
+}
+
+#submenu{
+    padding-top: 10px;
+    padding-left: 0px;
+    list-style: none;
+    max-height: 0px;
+    overflow: hidden;
+}
+#submenu li{
+    margin: 0px;
+    background-color: rgb(104, 144, 255);
+}
+#submenu li a{
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+footer #bottomMenu{
+    width: 100%;
+    height: 50%;
+}
+footer #bottomMenu ul{
+    list-style: none;
+    padding-left: 0px;
+}
+footer #company{
+    width: 100%;
+    height: 50%;
+}
+footer  #bottomMenu ul li{
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+}
+footer #bottomMenu ul li a{
+    text-decoration: none;
+    color: #222;
+}
+footer p {
+    line-height: 50px;
+    font-size: 14px;
+    display: inline-block;
+}
+footer img{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    float: right;
+}
+#tabMenu input[type=radio]{
+    display: none;
+}
+#tabMenu label{
+    /* border: 1px solid black; */
+    display: inline-block;
+    padding: 20px;
+    margin: 0px;
+    font-weight: 600;
+    color: #ccc;
+    height: 60px;
+}
+#tabMenu label:hover{
+    color: black;
+}
+/* 활성화된(radio버튼이 체크된 상태) 탭 메뉴 */
+#tabMenu input:checked + label{
+    border: 1px solid #ccc;
+    background-color: #eee;
+    color: rgb(173, 2, 2);
+}
+.tabContent{
+    display: none;
+    border-top: 1px solid #ccc;
+    padding: 10px 20px;
+    line-height: 2;
+    width: 100%;
+}
+#tab1:checked ~ #notice
+, #tab2:checked ~ #gallery{
+    display: block;
+}
+
+.tabContent ul{
+    list-style: none;
+    font-size: 15px;
+    padding-left: 0px;
+    height: 100%;
+}
+
+#tabMenu{
+    width: 100%;
+    position: relative;
+}
+
+#gallery ul li{
+    display: inline;
+}
+#gallery ul li img{
+    width: 150px;
+}
+#links ul{
+    list-style: none;
+    height: 100%;
+    position: relative;
+}
+#links ul li{
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+#links ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    color: #444;
+}
+#links ul li a img{
+    margin-top: 20px;
+    border-radius: 100%;
+
+}

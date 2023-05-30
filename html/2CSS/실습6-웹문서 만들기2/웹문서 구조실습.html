@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 구조 만들기 실습</title>
+    <style>
+        *{
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 1100px;
+            height: 880px;
+            /* background-color: bisque; */
+        }
+        header{
+            margin-bottom: 20px;
+        }
+
+        .top{
+            width: 100%;
+            height: 200px;
+            /* background-color: pink; */
+        }
+        .top form{
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(184, 183, 183);
+            background-color: white;
+            position: relative;
+        }
+
+        #search{
+            float: left;
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 40%;
+            transform: translateX(-50%); 
+            width: 400px;
+            height: 35px;
+            background-color: antiquewhite;
+        }
+        #search #search_tt{
+            float: left;
+            width: 80%;
+            height: 100%;
+            /* background-color: cadetblue; */
+        }
+        #search #search_bt{
+            float: left;
+            width: 20%;
+            height: 100%;
+            /* background-color: cornflowerblue; */
+        }
+        #search div input{
+            width: 100%;
+            height: 100%;
+        }
+
+        nav{
+            width: 100%;
+            height: 50px;
+            /* background-color: aquamarine; */
+        }
+        .menu ul{
+            width: 100%;
+            height: 100%;
+            padding-left: 0px;
+            list-style: none;
+            border: 1px solid rgb(184, 183, 183);
+        }
+        .menu ul li{
+            width: 20%;
+            height: 100%;
+            float: left;
+            background-color: white;
+            display: inline-block;
+            text-align: center;
+            line-height: 49px;
+        }
+        .menu ul li a{
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            font-size: 18px;
+            color: gray;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .menu ul li a:hover{
+            background-color: gray;
+            color: white;
+            transition: 0.3s;
+        }
+        main{
+            width: 100%;
+            height: 500px;
+            /* border: greenyellow; */
+            margin-bottom: 10px;
+        }
+
+        .content{
+            float: left;
+            width: 70%;
+            height: 500px;
+            /* background-color: deepskyblue; */
+        }
+        .content .mainbanner{
+            width: 100%;
+            height: 150px;
+            border: 1px solid rgb(184, 183, 183);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .content .centerbanner{
+            width: 100%;
+            height: 50px;
+            border: 1px solid rgb(184, 183, 183);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .content .subbanner{
+            width: 100%;
+            height: 280px;
+            border: 1px solid rgb(184, 183, 183);
+        }
+        .sidebanner{
+            float: left;
+            width: 30%;
+            height: 500px;
+            /* background-color: rgb(255, 152, 49); */
+            padding-left: 10px;
+        }
+        .sidebanner #login{
+            width: 100%;
+            height: 190px;
+            border: 1px solid rgb(184, 183, 183);
+            margin-bottom: 10px;
+        }
+        .sidebanner #ad{
+            width: 100%;
+            height: 300px;
+            border: 1px solid rgb(184, 183, 183);
+        }
+        footer{
+            width: 100%;
+            height: 150px;
+            border: 1px solid rgb(184, 183, 183);
+        }
+        #banner_title{
+            float: left;
+            width: 70%;
+            height: 100%;
+            line-height: 50px;
+            padding-left: 20px;
+            font-size: 13px;
+        }
+        .centerbanner ul{
+            float: right;
+            padding-left: 0px;
+            margin-right: 10px;
+        }
+        .centerbanner ul li{
+            display: inline-block;
+            list-style: none;
+            text-align: center;
+        }
+        .centerbanner ul li a{
+            text-decoration: none;
+            line-height: 50px;
+            color: black;
+            font-size: 12px;
+        }
+        .bottom_menu{
+            width: 100%;
+            height: 50px;
+            /* background-color: cornflowerblue; */
+            padding: 5px;
+        }
+        .bottom_menu ul{
+            padding-left: 0px;
+            float: left;
+            list-style: none;
+            width: 500px;
+            height: 100%;
+            /* background-color: crimson; */
+
+        }
+        .bottom_menu ul li{
+            height: 100%;
+            padding: 0px 20px;
+            display: inline-block;
+            list-style: none;
+            /* background-color: aquamarine; */
+        }
+        .bottom_menu ul li a{
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+            line-height: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class='wrap'>
+        <header>
+            <div class='top'>
+                <form action="get">
+                    <div id='search'>
+                        <div id='search_tt'>
+                             <input type="search" name="search">
+                        </div>
+                        <div id='search_bt'>
+                            <input type="submit" value="검색">
+                        </div>
+                    </div>
+                </form>
+                <nav class='menu'>
+                    <ul>
+                        <li><a href="#">교육과정</a></li>
+                        <li><a href="#">교육원소개</a></li>
+                        <li><a href="#">취업지원센터</a></li>
+                        <li><a href="#">신학연계</a></li>
+                        <li><a href="#">상담센터</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class='content'>
+                <div class='mainbanner'>
+                    <img src="image/banner.PNG" alt="배너">
+                </div>
+                <div class='centerbanner'>
+                    <div id='banner_title'>안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다.</div>
+                    <ul>
+                        <li><a href="#">경제</a></li>
+                        <li><a href="#">연예</a></li>
+                        <li><a href="#">사회</a></li>
+                    </ul>
+                </div>
+                <div class='subbanner'>
+                    <img src="image/car.PNG" alt="자동차">
+                </div>
+            </div>
+            <div class='sidebanner'>
+                <div id='login'></div>
+                <div id='ad'>
+                    <img src="image/shopping.PNG" alt="쇼핑">
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <nav class='bottom_menu'>
+                <ul>
+                    <li style='border-right: 2px sold gray;'><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+            <div>
+                강남지원 1관: 서울특별시 강남구 테헤란로14길~ <br>
+                강남지원 2관: 서울특별시 강남구 테헤란로10길~ <br>
+                강남지원 3관: 서울특별시 강남구 테헤란로130~
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
